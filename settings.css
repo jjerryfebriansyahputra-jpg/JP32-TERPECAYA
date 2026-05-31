@@ -1,0 +1,118 @@
+/* ================= GLOBAL SETTINGS THEME ================= */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body {
+    background: url('cosmic_bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    background-color: #040508;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.top-nav {
+    display: flex; gap: 20px; padding: 15px 30px;
+    background: rgba(5, 6, 10, 0.9);
+    border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.nav-item { cursor: pointer; color: #00f2fe; font-size: 14px; }
+.nav-item.active { font-weight: bold; text-decoration: underline; }
+
+/* ================= LAYOUT WRAPPER ================= */
+.settings-wrapper {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.settings-sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-item {
+    background: rgba(181, 123, 237, 0.1);
+    border: 1px solid rgba(181, 123, 237, 0.2);
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.sidebar-item:hover, .sidebar-item.active {
+    background: rgba(0, 242, 254, 0.1);
+    border-color: #00f2fe;
+    color: #00f2fe;
+}
+
+.settings-content {
+    flex: 2.5;
+    background: rgba(13, 14, 22, 0.85);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid rgba(181, 123, 237, 0.2);
+}
+
+/* ================= TAB STYLING ================= */
+.settings-tab h3 { color: #00f2fe; margin-bottom: 10px; letter-spacing: 1px; }
+.tab-desc { font-size: 13px; color: #8a8d98; margin-bottom: 30px; }
+
+.input-group { margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
+.input-group label { font-size: 12px; color: #b57bed; font-weight: bold; }
+.input-group input, .input-group textarea {
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 12px;
+    border-radius: 6px;
+    color: #fff;
+    outline: none;
+}
+.input-group input:focus { border-color: #00f2fe; }
+
+.btn-cyan {
+    background: #00f2fe; color: #000; border: none; padding: 12px 25px;
+    border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+.btn-cyan:hover { box-shadow: 0 0 15px rgba(0, 242, 254, 0.5); }
+
+.btn-purple {
+    background: #b57bed; color: #fff; border: none; padding: 12px 25px;
+    border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+
+.avatar-preview{
+    width:120px;
+    height:120px;
+    margin-bottom:15px;
+}
+
+.avatar-preview img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #00eaff;
+    box-shadow:0 0 15px #00eaff;
+}
+
+.avatar-actions button{
+    background:#00eaff;
+    color:#000;
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-right:10px;
+    font-weight:600;
+}
+
+.hidden { display: none; }
+
+Halaman pengaturan Anda kini sudah siap secara visual maupun teknis! Pengguna bisa mengganti nama melalui tab 'Ubah Profil' dan memperbarui keamanan melalui 'Ganti Sandi'. Beri tahu saya jika ada bagian lain yang ingin Anda kustomisasi.

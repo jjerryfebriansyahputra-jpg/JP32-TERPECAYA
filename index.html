@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer Portal - Auth</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <header class="top-nav">
+        <div class="nav-item">☰ Menu</div>
+        <div class="nav-item">📅 Events</div>
+        <div class="nav-item">🎁 Promotions</div>
+    </header>
+
+    <main class="login-wrapper">
+        <div class="glass-box">
+            
+            <div id="loginFormContent">
+                <h2>DAFTAR / LOGIN <br><span>KELAS DUNIA</span></h2>
+                
+                <form id="loginForm">
+                    <div class="input-field">
+                        <input type="text" id="loginUsername" placeholder="Username" required>
+                    </div>
+                    
+                    <div class="input-field">
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                    </div>
+                    
+                    <div class="forgot-link">
+                        <a href="#">Lupa Kata Sandi?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">MASUK SEKARANG</button>
+                    <button type="button" id="btnToRegister" class="btn-secondary">BUAT AKUN BARU</button>
+                </form>
+            </div>
+
+            <div id="registerFormContent" class="hidden">
+                <h2>REGISTRASI <br><span>AKUN BARU</span></h2>
+                
+                <form id="registerForm">
+                    <div class="input-field">
+                        <input type="text" id="regUsername" placeholder="Username Baru (Min. 5 Karakter)" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" id="regEmail" placeholder="Alamat Gmail Aktif" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="regPassword" placeholder="Password Baru (Min. 8 Karakter)" required>
+                    </div>
+                    
+                    <p id="errorValidation" class="error-text"></p>
+                    
+                    <button type="submit" class="btn-secondary">KIRIM KODE VERIFIKASI</button>
+                    <button type="button" id="btnToLogin" class="btn-primary">KEMBALI KE LOGIN</button>
+                </form>
+            </div>
+
+            <div id="verificationBox" class="hidden">
+                <h2>VERIFIKASI EMAIL<br><span>MASUKKAN KODE OTP</span></h2>
+                <p style="font-size: 13px; color: #bbb; margin-bottom: 20px;">Kami telah mengirimkan kode verifikasi ke Gmail Anda.</p>
+                
+                <form id="verificationForm">
+                    <div class="input-field">
+                        <input type="text" id="otpInput" placeholder="0000" maxlength="4" required style="text-align: center; font-size: 20px; letter-spacing: 8px;">
+                    </div>
+                    <p id="errorOTP" class="error-text"></p>
+                    <button type="submit" class="btn-secondary">VERIFIKASI & DAFTAR</button>
+                </form>
+            </div>
+
+            <div class="footer-text">
+                <p>PENGALAMAN BERMAIN JP 32 TERPERCAYA</p>
+                <div class="support-info">
+                    <span>🎧 Live Support</span>
+                    <span>💳 Pembayaran Anon</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JP 32 Dashboard</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="menu-left">
+        <a href="#"><i class="fas fa-home"></i> Utama</a>
+        <a href="#"><i class="fas fa-music"></i> MUSIK</a>
+        <a href="#"><i class="fas fa-store"></i> Toko</a>
+    </div>
+
+    <div class="menu-right">
+        <img src="f:\JP 32 UTAMA.png" class="mini-avatar">
+        <span>kia12</span>
+        <a href="#"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- PROFILE -->
+    <div class="profile-card">
+
+        <img src="f:\JP 32 UTAMA.png" class="avatar">
+
+        <h2>kia12</h2>
+        <p>ID : 987654</p>
+
+        <div class="stat">
+            <span>Warga Aktif</span>
+            <b>Lv 1</b>
+        </div>
+
+        <div class="stat">
+            <span>Saldo Bank</span>
+            <b class="green">$5,000</b>
+        </div>
+
+        <div class="stat">
+            <span>Koin Premium</span>
+            <b class="gold">$25,000</b>
+        </div>
+
+        <button class="btn">
+            LIHAT PROFIL
+        </button>
+
+    </div>
+
+    <div class="hero">
+
+    <img src="f:\JP32 pro.png" class="dragon">
+
+    <div class="hero-content">
+
+        <div class="badge">JP</div>
+
+        <h1>
+            JP 32
+            <span>TERPERCAYA</span>
+        </h1>
+
+        <p>
+            Platform game komunitas dengan event,
+            hadiah dan fitur premium.
+        </p>
+
+
+
+        <div class="features">
+
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                Aman
+            </div>
+
+            <div class="feature">
+                <i class="fas fa-bolt"></i>
+                Cepat
+            </div>
+
+            <div class="feature">
+                <i class="fas fa-scale-balanced"></i>
+                Fair
+            </div>
+
+            <div class="feature">
+                <i class="fas fa-headset"></i>
+                Support
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- RIGHT MENU -->
+    <div class="side-menu">
+
+        <div class="menu-card">
+            <i class="fas fa-trophy"></i>
+            EVENT SPESIAL
+        </div>
+
+        <div class="menu-card">
+            <i class="fas fa-users"></i>
+            KOMUNITAS
+        </div>
+
+        <a href="permainan.html" class="menu-card">
+    <i class="fas fa-gamepad"></i>
+    GAME LENGKAP
+</a>
+
+        <div class="menu-card">
+            <i class="fas fa-gift"></i>
+            HADIAH HARIAN
+        </div>
+
+        <div class="menu-card">
+            <i class="fas fa-cog"></i>
+            PENGATURAN
+        </div>
+
+    </div>
+
+</div>
+
+<!-- BOTTOM -->
+<div class="bottom">
+
+    <div class="news">
+        <h3>BERITA TERBARU</h3>
+        <p>Update terbaru tersedia sekarang.</p>
+    </div>
+
+    <div class="status">
+        <h3>SERVER STATUS</h3>
+        <span class="online">ONLINE</span>
+    </div>
+
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="f:\JP Tiga Dua.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.addEventListener("click", function () {
+    const music = document.getElementById("bgMusic");
+    music.play();
+}, { once: true });
+</script>
+
+
+</body>
+</html>

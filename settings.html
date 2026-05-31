@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP 32 - Pengaturan Akun</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+
+    <header class="top-nav">
+        <div class="nav-item" onclick="window.location.href='dashboard.html'">🏠 Kembali</div>
+        <div class="nav-item active">🔧 Pengaturan</div>
+        <div class="nav-item" id="btnLogout" style="color: #ff4d4d; margin-left: auto; cursor: pointer;">🚪 Keluar</div>
+    </header>
+
+    <main class="settings-wrapper">
+        <aside class="settings-sidebar">
+            <div class="sidebar-item active" onclick="switchTab('profil')">👤 Ubah Profil</div>
+            <div class="sidebar-item" onclick="switchTab('keamanan')">🔒 Ganti Sandi</div>
+            <div class="sidebar-item" onclick="switchTab('notif')">🔔 Notifikasi</div>
+            <div class="sidebar-item" onclick="switchTab('bahasa')">🌐 Bahasa</div>
+        </aside>
+
+        <section class="settings-content glass-panel">
+            
+            <div id="tab-profil" class="settings-tab">
+                <h3>MANAJEMEN PROFIL</h3>
+                <p class="tab-desc">Sesuaikan identitas digital Anda di portal JP 32.</p>
+                <form id="profileForm">
+                    <div class="avatar-section">
+    <div class="avatar-preview">
+        <img id="profilePreview"
+             src="assets/default-avatar.png"
+             alt="Profile">
+    </div>
+
+    <div class="avatar-actions">
+        <input type="file"
+               id="profileImage"
+               accept="image/*"
+               hidden>
+
+        <button onclick="document.getElementById('profileImage').click()">
+            Upload Gambar
+        </button>
+
+        <button onclick="openPlayerAvatarModal()">
+            Pilih Avatar Pemain
+        </button>
+    </div>
+</div>
+                    <div class="input-group">
+                        <label>Username Baru</label>
+                        <input type="text" id="newUsername" placeholder="Contoh: kia_legend_32">
+                    </div>
+                    <div class="input-group">
+                        <label>Bio Singkat</label>
+                        <textarea id="newBio" rows="3" placeholder="Ceritakan siapa Anda di arena bermain..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-cyan">SIMPAN PERUBAHAN</button>
+                </form>
+            </div>
+
+            <div id="tab-keamanan" class="settings-tab hidden">
+                <h3>KEAMANAN AKUN</h3>
+                <p class="tab-desc">Gunakan kombinasi sandi yang kuat untuk perlindungan maksimal.</p>
+                <form id="passwordForm">
+                    <div class="input-group">
+                        <label>Sandi Lama</label>
+                        <input type="password" id="oldPass" placeholder="••••••••">
+                    </div>
+                    <div class="input-group">
+                        <label>Sandi Baru</label>
+                        <input type="password" id="newPass" placeholder="Minimal 8 Karakter">
+                    </div>
+                    <div class="input-group">
+                        <label>Konfirmasi Sandi Baru</label>
+                        <input type="password" id="confirmPass" placeholder="Ulangi Sandi Baru">
+                    </div>
+                    <button type="submit" class="btn-purple">PERBARUI KATA SANDI</button>
+                </form>
+            </div>
+
+            <div id="tab-notif" class="settings-tab hidden">
+                <h3>NOTIFIKASI</h3>
+                <p>Segera hadir: Pengaturan alert email dan push.</p>
+            </div>
+            <div id="tab-bahasa" class="settings-tab hidden">
+                <h3>BAHASA</h3>
+                <p>Pilihan bahasa: Indonesia (Default), English, Japanese.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        // Fungsi pindah TAB
+        function switchTab(tabName) {
+            document.querySelectorAll('.settings-tab').forEach(t => t.classList.add('hidden'));
+            document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
+            
+            document.getElementById('tab-' + tabName).classList.remove('hidden');
+            event.currentTarget.classList.add('active');
+        }
+
+        // Simpan Profil (Simulasi)
+        document.getElementById('profileForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nUser = document.getElementById('newUsername').value;
+            if(nUser) {
+                localStorage.setItem('savedUser', nUser);
+                alert('Profil diperbarui! Nama Anda kini: ' + nUser);
+            }
+        });
+
+        // Ganti Sandi (Simulasi)
+        document.getElementById('passwordForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Sandi berhasil diganti! Gunakan sandi baru saat login berikutnya.');
+        });
+    </script>
+</body>
+</html>
